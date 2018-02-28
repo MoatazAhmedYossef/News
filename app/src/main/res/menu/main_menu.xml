@@ -4,11 +4,11 @@
 
     <item
         android:id="@+id/top_news_menu"
-        android:title="Top News" />
+        android:title="@string/top_news" />
     <item
         android:id="@+id/read_later_menu"
-        android:title="Read Later" />
+        android:title="@string/read_later" />
     <item
         android:id="@+id/sign_menu"
-        android:title="Sign In/Out" />
+        android:title="@string/sing_in_out" />
 </menu>

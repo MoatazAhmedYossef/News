@@ -26,6 +26,7 @@
                     android:layout_height="wrap_content"
                     android:adjustViewBounds="true"
                     android:scaleType="fitXY"
+                    android:contentDescription="@string/news_photo"
                     android:src="@drawable/placeholder" />
 
                 <LinearLayout
@@ -118,6 +119,7 @@
         android:layout_gravity="bottom|end"
         android:layout_margin="@dimen/fab_margin"
         android:background="@color/white"
+        android:contentDescription="@string/add_remove_to_read_later"
         android:elevation="@dimen/fab_elevation"
         android:src="@android:drawable/ic_input_add" />
 </android.support.design.widget.CoordinatorLayout>

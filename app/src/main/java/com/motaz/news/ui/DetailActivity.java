@@ -49,8 +49,8 @@ public class DetailActivity extends AppCompatActivity {
                     .error(R.drawable.placeholder)
                     .into(thumbnail);
             newsTitle.setText(news.getTitle());
-            newsSubtitle.setText(news.getAuthor() + ", "+news.getPublishedAt());
-            newsBody.setText(news.getDescription()  +"\n"+news.getUrl());
+            newsSubtitle.setText(news.getAuthor() +R.string.comma_speration+news.getPublishedAt());
+            newsBody.setText(news.getDescription()  +R.string.new_line+news.getUrl());
         }
         MobileAds.initialize(this, getString(R.string.banner_ad_unit_id));
         AdRequest adRequest = new AdRequest.Builder()

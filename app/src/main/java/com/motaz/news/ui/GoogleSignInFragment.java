@@ -87,11 +87,6 @@ public class GoogleSignInFragment extends Fragment implements GoogleApiClient.On
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_google_sign_in, container, false);
         ButterKnife.bind(this,view);
-//        mLinearLayout = view.findViewById(R.id.sign_in_layout);
-//        signOutButton = view.findViewById(R.id.sign_out_but);
-//        signInButton = view.findViewById(R.id.sign_in_but);
-//        mStatusTextView = view.findViewById(R.id.login_status);
-//        profileImageView = view.findViewById(R.id.profile_photo_image);
         signInButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -166,21 +161,6 @@ public class GoogleSignInFragment extends Fragment implements GoogleApiClient.On
         Snackbar.make(mLinearLayout,R.string.failed_to_conect,Snackbar.LENGTH_LONG);
     }
 
-    /**
-     * This interface must be implemented by activities that contain this
-     * fragment to allow an interaction in this fragment to be communicated
-     * to the activity and potentially other fragments contained in that
-     * activity.
-     * <p>
-     * See the Android Training lesson <a href=
-     * "http://developer.android.com/training/basics/fragments/communicating.html"
-     * >Communicating with Other Fragments</a> for more information.
-     */
-    public interface OnFragmentInteractionListener {
-        // TODO: Update argument type and name
-        void onFragmentInteraction(Uri uri);
-    }
-
     @Override
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
@@ -227,10 +207,7 @@ public class GoogleSignInFragment extends Fragment implements GoogleApiClient.On
 
         protected void onPostExecute(Bitmap result) {
             if (result != null) {
-                //Bitmap resized = Bitmap.createScaledBitmap(result,200,200, true);
                 gmailImage.setImageBitmap(result);
-                //mageBitmap(ImageHelper.getRoundedCornerBitmap(getContext(),resized,250,200,200, false, false, false, false));
-
             }
         }
     }

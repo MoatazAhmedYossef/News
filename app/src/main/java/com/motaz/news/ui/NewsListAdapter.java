@@ -59,7 +59,7 @@ public class NewsListAdapter extends RecyclerView.Adapter<NewsListAdapter.NewsIt
                 .error(R.drawable.placeholder)
                 .into(holder.thumbnail);
         holder.newsTitle.setText(newsToShow.getTitle());
-        holder.newsSubtitle.setText(newsToShow.getAuthor() + ", "+newsToShow.getPublishedAt());
+        holder.newsSubtitle.setText(newsToShow.getAuthor() + R.string.comma_speration+newsToShow.getPublishedAt());
         View.OnClickListener mOnClickListener = new View.OnClickListener() {
             @Override
             public void onClick(View view) {
